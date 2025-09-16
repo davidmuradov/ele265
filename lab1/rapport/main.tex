@@ -1,0 +1,97 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm, columnsep=20pt]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{microtype}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage[]{siunitx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{float}
+\usepackage{subcaption}
+%\usepackage{mathabx}
+\usepackage{bigints}
+\usepackage{pgfplots}
+
+% Graph settings
+\pgfplotsset{width=10cm,compat=1.9}
+
+% Reduce compilation time for graphs
+%\usepgfplotslibrary{external}
+%\tikzexternalize
+
+\addto\captionsfrench{\def\tablename{Tableau}}
+\addto\captionsfrench{\def\figurename{Figure}}
+\setlength{\headheight}{15.36pt}
+\setlength{\abovetopsep}{10pt}
+\setlength\parindent{0pt}
+
+% \dottedcontents{<section>}[<left>]{<above-code>}
+% {<label width>}{<leader width>}
+\dottedcontents{section}[1.4cm]{\bfseries}{2.9em}{1pc}
+\dottedcontents{subsection}[2cm]{}{3.3em}{1pc}
+
+% center the toc heading (faut reparer ca, fonctionne pas ..)
+\addto\captionsfrench{\renewcommand{\contentsname}{\hfill\bfseries\Large Table des matières\hfill}}
+%\renewcommand{\cfttoctitlefont}{\hfill\bfseries\huge}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\newcommand{\lap}{\mathcal{L}}
+
+\newcommand{\mm}{\text{ mm}}
+\newcommand{\mps}{\text{ m/s}}
+\newcommand{\mpss}{\text{ m/s}^2}
+\newcommand{\wsin}{W\sin(30^\circ)}
+\newcommand{\wcos}{W\cos(30^\circ)}
+
+\begin{document}
+
+\begin{titlepage}
+\center
+
+\vspace*{2cm}
+
+\textsc{\LARGE École de technologie supérieure}\\[1cm]
+\textsc{\Large ELE 265 -- Traitement de signaux}\\[1.5cm]
+
+\rule{\linewidth}{0.5mm} \\[0.5cm]
+{\LARGE \bfseries Laboratoire 1} \\[0.2cm]
+\rule{\linewidth}{0.5mm} \\[3cm]
+
+\large par: \\*
+Aziz Ghazali\\
+Amine Aksas\\
+David Muradov\\[8cm]
+
+
+{\large \today }\\[3cm]
+
+\vfill
+\end{titlepage}
+
+% Pour imprimer la premiere page apart
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+%\newpage
+%\vfill
+%\newpage
+%\tableofcontents
+%\vfill
+%\newpage
+
+\input{question1.tex}
+%\input{question2.tex}
+%\input{question3.tex}
+%\input{question4.tex}
+%\input{question5.tex}
+%\input{question6.tex}
+
+\end{document}
